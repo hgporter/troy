@@ -1,0 +1,386 @@
+html, body{
+	height: 100%;     
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	font-family: Cambria;
+	font-size: 14px;
+}
+
+/* mobile display */
+
+#container{
+	width: 100%;
+	flex: 1 0 auto;
+}
+
+h1{
+	font-size: 16px;
+	line-height: 25px;
+}
+
+.student{
+	font-weight: lighter;
+}
+
+#nav{
+	overflow: hidden;
+	position: relative;
+	padding: 10px 20px;
+	background-color: #ffcccc;
+}
+
+.menu{
+	display: flex;
+	justify-content: flex-end;
+	width: 35%;
+}
+
+#heading-logo{
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+#heading-logo a{
+	text-decoration: none;
+	color: #000;
+}
+
+#nav img{
+	width: 15%;
+}
+
+#links{
+	display: none;
+	text-align: center;
+}
+
+#links a{
+	color: #000;
+	text-decoration: none;
+	display: block;
+	padding: 14px 16px;
+}
+
+.dropdown{
+	position: relative;
+	display: block;
+}
+
+.dropdown2{
+	position: relative;
+	display: block;
+}
+
+.dropdown button{
+	border: none;
+	background-color: #ffcccc;
+	font-size: 14px;
+	font-family: Cambria;
+	cursor: pointer;
+	color: #000;
+}
+
+.dropdown2 button{
+	border: none;
+	background-color: #ffcccc;
+	font-size: 14px;
+	font-family: Cambria;
+	cursor: pointer;
+	color: #000;
+}
+
+.break{
+	display: none;
+}
+
+.dropdown-content{
+	display: none;
+	position: relative;
+}
+
+.dropdown-content2{
+	display: none;
+	position: relative;
+}
+
+.content{
+	display: none;
+}
+
+.content2{
+	display: none;
+}
+
+h2{
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.heading{
+	text-align: center;
+	background-color: #ffcccc;
+	padding: 8px 14px;
+	font-size: 18px;
+}
+
+#images{
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto 20px;
+}
+
+.column{
+	flex: 100%;
+}
+
+.column img{
+	width: 85%;
+	display: flex;
+	margin: 40px auto;
+}
+
+#myModal{
+	display: none;
+}
+
+.modal-content{
+	display: none;
+}
+
+.close{
+	display: none;
+}
+
+.arrow{
+	font-size: 25px;
+	text-decoration: none;
+	text-align: center;
+	margin: 15px;
+	color: #000;
+}
+
+#footer{
+	background-color: #ffcccc;
+}
+
+.footer-links{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.copyright{
+	text-align: center;
+}
+
+#footer a{
+	text-decoration: none;
+	color: #000;
+	padding-top: 20px;
+	padding-bottom: 5px;
+}
+
+@media only screen and (min-width: 768px) { 
+
+#nav img{
+	width: 8%;
+}
+
+.column{
+	flex: 50%;
+}
+
+#footer{
+	margin-top: 30px;
+}
+
+}
+
+@media only screen and (min-width: 1280px) { 
+
+h1{
+	margin-left: 20px;
+}
+
+#heading-logo{
+	width: 50%;
+}
+
+#links{
+	display: flex;
+	gap: 25px;
+	align-items: center;
+	padding-right: 40px;
+}
+
+#nav{
+	display: flex;
+	border-bottom: none;
+	align-items: center;
+	padding-top: 30px;
+	padding-bottom: 110px;
+	justify-content: space-between;
+	background-color: #fff;
+}
+
+.dropdown button{
+	background-color: #fff;
+}
+
+.dropdown2 button{
+	background-color: #fff;
+}
+
+.break{
+	display: block;
+}
+
+#dropdown-content{
+	border: solid 1px #000;
+	margin-top: 8px;
+	width: 125px;
+	text-align: left;
+}
+
+#dropdown-content2{
+	border: solid 1px #000;
+	margin-top: 8px;
+	width: 125px;
+	text-align: left;
+}
+
+.content{
+	position: absolute;
+}
+
+.content2{
+	position: absolute;
+}
+
+.menu{
+	display: none;
+}
+
+#images{
+	margin-top: 50px;
+}
+
+.column{
+	flex: 25%;
+}
+
+.column img{
+	cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 50%;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: lighter;
+    transition: 0.3s;
+    display: block;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+}
+
+@media only screen and (min-width: 1920px) {
+
+h1{
+	padding-left: 30px;
+}
+
+}
+
+@media only screen and (min-width: 2560px) {
+
+body{
+	font-size: 16px;
+}
+
+.dropdown button{
+	font-size: 16px;
+}
+
+.dropdown2 button{
+	font-size: 16px;
+}
+
+#nav{
+	padding-bottom: 130px;
+}
+
+.column img{
+	margin: 60px auto;
+}
+
+}
+
